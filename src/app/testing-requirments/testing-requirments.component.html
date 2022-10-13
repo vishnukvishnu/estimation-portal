@@ -1,0 +1,237 @@
+<p class = "projet-heding-inbetween projet-heding-inbetween-left">Project quantum</p>
+<div class="example-card testing-requirement-container">
+  <div class = "deal-info-header">
+    <h3 class = "mian-title">Testing Requirements</h3>
+  </div>
+  <div class = "row selectbox-wrapper">
+    <div class = "col-sm-12 col-md-6 select-box-control">
+      <label>You can either upload the testing requirment data through excell, or fill the below table diectly</label>
+      <input type="file" (change)="fileEvent($event)" placeholder="Upload excel sheet" class="form-control file-type">
+      <!--<input type="file" placeholder="Upload excel sheet" class="form-control file-type">-->
+      <span class ="icon-doc_upload"></span><span class ="icon-star_filled"></span>
+      <input placeholder="Upload excel sheet" class="form-control">
+      <p align="right" >upload only in excel format and do not rename or change fields from the downloaded template</p>
+      <div *ngIf="fileName" class = "file-name" mat-raised-button >{{fileName}}
+        <span class = "icon-delete icon-file_name" (click)="clearFile()"></span>
+      </div>
+    </div>
+
+    <div class = "col-sm-12 col-md-5 select-box-control">
+      <button class = "download-button" mat-raised-button >DOWNLOAD TEMPLATE</button>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-container">
+    <thead>
+
+    <tr class = "table-title">
+      <th class = "table-title-first">Release Name</th>
+      <th class = "table-title-first">Testing Type</th>
+      <th class = "table-title-first icon-info-th" colspan="3">Number of complex functionalities
+      <span class = "icon-info" data-toggle="modal" data-target="#myModal" ></span>
+      </th>
+      <th class = "table-title-first">Automation percentage(%)  </th>
+      <th class = "table-title-first">Action</th>
+    </tr>
+      <tr class = "border-none">
+      <th class = "border-none" ></th>
+      <th class = "border-none" ></th>
+      <th class = "table-sub-heading low">Low</th>
+      <th class = "table-sub-heading medium">Medium</th>
+      <th class = "table-sub-heading">Heigh</th>
+      <th class = "border-none" ></th>
+      <th class = "border-none"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  *ngFor="let item of tableElements">
+      <!--<th *ngIf="edit === 'item.show'" >{{item.releaseName}}</th>-->
+      <!--<th *ngIf="edit === 'item.hide'" ><input type = "text" /></th>-->
+      <th >{{item.releaseName}}</th>
+      <th>{{ item.testingType}}{{item.show}}</th>
+      <th class = "complex-cell">{{item.low}}</th>
+      <th class = "complex-cell">{{ item.medium}}</th>
+      <th class = "complex-cell">{{ item.heigh }}</th>
+      <th class = "persentage-leftalign">{{item.persentage}}</th>
+      <th  class = icon-cell><span class="icon-edit"></span><span class="icon-delete"></span></th>
+    </tr>
+    <tr *ngIf="!delete">
+      <th *ngIf="edit === 'show'">test version 1.0</th>
+      <th *ngIf="edit === 'hide'" ><input type = "text" /></th>
+      <th *ngIf="edit === 'show'" >Regression</th>
+      <th *ngIf="edit === 'hide'"><select>
+        <option>Registration1</option>
+        <option>Registration2</option>
+        <option>Registration3</option>
+      </select>
+        <!--<label class = "hide-select">sdfdsfdsfdsf</label>-->
+      </th>
+      <th *ngIf="edit === 'show'" class = "complex-cell">01</th>
+      <th *ngIf="edit === 'hide'" class = "complex-cell"><input type = "text" /></th>
+      <th *ngIf="edit === 'show'" class = "complex-cell">01</th>
+      <th *ngIf="edit === 'hide'" class = "complex-cell"><input type = "text" /></th>
+      <th *ngIf="edit === 'show'" class = "complex-cell">01</th>
+      <th *ngIf="edit === 'hide'" class = "complex-cell"><input type = "text" /></th>
+      <th class = "persentage-leftalign" *ngIf="edit === 'show'">80%</th>
+      <th *ngIf="edit === 'hide'"><input type = "text" /></th>
+      <th  class = icon-cell><span *ngIf="edit === 'show'" class="icon-edit" (click)="edit = 'hide'"></span>
+        <span  *ngIf="edit === 'hide'" class="icon-circle_add"></span>
+        <span class="icon-delete" (click)="deleteFunction()"></span></th>
+    </tr>
+    <tr>
+
+      <th  ><input type = "text" /></th>
+      <th ><select>
+        <option>Registration1</option>
+        <option>Registration2</option>
+        <option>Registration3</option>
+      </select>
+        <!--<label class = "hide-select">sdfdsfdsfdsf</label>-->
+      </th>
+      <th class = "complex-cell"><input type = "text" /></th>
+      <th  class = "complex-cell"><input type = "text" /></th>
+      <th  class = "complex-cell"><input type = "text" /></th>
+      <th><input type = "text" /></th>
+      <th  class = icon-cell>
+        <span  class="icon-circle_add"></span>
+        <span class="icon-delete"></span>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+  <div class = "button-wrapper">
+    <button mat-raised-button class = "resetsave">RESET</button>
+    <button mat-raised-button class = "save-buttton resetsave" routerLink = "/estmationflow/generaliformations" >SAVE</button>
+    <button mat-raised-button class = "save-buttton" >GENERATE ESTIMATE</button>
+  </div>
+  <div class = "button-wrapper">
+      <button mat-raised-button data-toggle="modal" data-target="#myModal1">Popup-1</button>
+      <button mat-raised-button data-toggle="modal" data-target="#myModal2">Popup-2</button>
+      <button mat-raised-button data-toggle="modal" data-target="#myModal3">Popup-3</button>
+  </div>
+</div>
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-scroll">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Defenition of complexity of text functionality</h4>
+        <button type="button" class="close icon-close" data-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body scrollbar" id="style-2">
+        <h4>Small</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release
+          of Letraset sheets containing Lorem Ipsum passages,
+          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <h4>Medium	</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+          when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release
+          of Letraset sheets containing Lorem Ipsum passages,
+          and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary save-buttton-popup" data-dismiss="modal">Ok</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title alert">Alert</h4>
+        <button type="button" class="close icon-close" data-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+
+        <p>
+          Please select testing type for the rows updated
+        </p>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary save-buttton-popup" data-dismiss="modal">Ok</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title alert">Alert</h4>
+        <button type="button" class="close icon-close" data-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p>
+          Automation persentage shall be 0% - 100%
+        </p>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary save-buttton-popup" data-dismiss="modal">Ok</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal3">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title alert">Alert</h4>
+        <button type="button" class="close icon-close" data-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body bullet-point-dody">
+        <span ></span>
+        <p>
+          Automation persentage shall be 0% - 100%
+        </p>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary save-buttton-popup" data-dismiss="modal">Ok</button>
+      </div>
+
+    </div>
+  </div>
+</div>

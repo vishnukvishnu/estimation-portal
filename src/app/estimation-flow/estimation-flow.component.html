@@ -1,0 +1,50 @@
+
+<div class="example-card estimation-flow-container bubble">
+  <h3 class = "mian-title">Estimation flow</h3>
+  <ul class="row ">
+    <li class="col-sm-12 col-md-3 li-wrapper">
+      <ul>
+        <li (click) ="dealinformation()">
+          <div class="example-header-image active-tick" [class.active]="viewMode == 'information'"
+               (click)="viewMode = 'information'"><a class = "icon-check_mark"></a></div>
+        </li>
+        <li [class.addbold]="viewMode == 'information'">Project information</li>
+        <span class="icon-arrow_drop_right"></span>
+      </ul>
+    </li>
+    <li (click) ="dealparameters()" class="col-sm-12 col-md-3 li-wrapper">
+      <ul>
+        <li >
+          <div class="example-header-image" [class.active]="viewMode == 'parameters'"
+               (click)="viewMode = 'parameters'"><a>2</a></div>
+        </li>
+        <li [class.addbold]="viewMode == 'parameters'">Deal parameters</li>
+        <span class="icon-arrow_drop_right"></span>
+      </ul>
+    </li>
+    <li class="col-sm-12 col-md-3 li-wrapper">
+      <ul>
+        <li (click) ="testingrequirments()">
+          <div class="example-header-image" [class.active]="viewMode == 'requirments'"
+               (click)="viewMode = 'requirments'"><a>3</a></div>
+        </li>
+        <li [class.addbold]="viewMode == 'requirments'">Testing requirments</li>
+        <span class="icon-arrow_drop_right"></span>
+      </ul>
+    </li>
+    <li class="col-sm-12 col-md-3 li-wrapper">
+      <ul>
+        <li (click) ="generaliformations()" >
+          <div class="example-header-image" [class.active]="viewMode == 'estimate'"
+               (click)="viewMode = 'estimate'"><a>4</a></div>
+        </li>
+        <li [class.addbold]="viewMode == 'estimate'">General estimate</li>
+
+      </ul>
+    </li>
+
+  </ul>
+</div>
+<router-outlet ></router-outlet>
+
+

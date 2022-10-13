@@ -1,0 +1,147 @@
+
+.testing-requirement-container{
+  max-width: 1200px;
+  margin:0 auto;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  background:#f7f5f5;
+  height: auto;
+  margin-top: 20px;
+}
+.testing-requirement-container:after{
+  display: block;
+  clear:both;
+  content:"";
+}
+.testing-requirement-container h3{
+  margin-left: 30px;
+  padding-top: 15px;
+  color: #00a2e0;
+}
+.button-wrapper button{
+  background: #00a2e0;
+  color:white;
+  margin-top: 10px;
+  margin-left:30px;
+  padding-left:20px;
+  padding-right:20px;
+}
+ .button-wrapper .save-buttton{
+  margin-left: 25px;
+}
+.button-wrapper{
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 73px;
+}
+.testing-requirement-container .deal-infosub-header{
+  border-bottom:2px solid #00a2e0;
+  margin: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+
+}
+
+.testing-requirement-container .table-container .border-none{
+  border-left: none;
+  border-top: none;
+  background:#cdf0fd;
+}
+.testing-requirement-container .table-container .table-title th{
+  border-bottom: none;
+  border-left: none;
+  background:#cdf0fd;
+}
+.testing-requirement-container .table-container .table-title .table-title-first{
+  background:#cdf0fd;
+
+}
+.testing-requirement-container .table-container .table-sub-heading{
+  background: #9ce457;
+}
+
+.testing-requirement-container .table-container .medium{
+  background: #94ef70;
+}
+.testing-requirement-container .table-container .low{
+  background: #b0e899;
+}
+.testing-requirement-container .table-container .complex-cell{
+  background: #effbd7;
+  text-align:right;
+}
+ .total-row th{
+  border:none;
+  font-weight: bold !important;
+   background:white !important;
+}
+.testing-requirement-container .table-container tr th{
+  font-family: 'AkkuratStd-Regular';
+  font-size: 13px;
+  font-weight: 500;
+}
+.testing-requirement-container .table-container tr .icon-cell{
+  text-align: center;
+}
+.testing-requirement-container .table-container tr .icon-cell .fa-edit{
+  padding-left:50px;
+}
+
+ .mat-expansion-panel-body{
+  padding-left:0px;
+  padding-right:0px;
+}
+.modal-dialog .btn-secondary{
+  background: #00a2e0;
+  border:none;
+}
+
+#myModal1 .modal-title{
+  color: #00a2e0;
+}
+
+#myModal2 .modal-title{
+  color: red;
+}
+#myModal3 .modal-title{
+  color: red;
+}
+.bullet-point-dody span{
+  background: #00a2e0;
+  width:25px;
+  height:25px;
+  border-radius:50% ;
+
+}
+.accordian-spacing .mat-expansion-panel{
+  margin-top:2px;
+}
+
+//Model bullets
+.modal-content .modal-body p{
+  margin-left: 15px;
+}
+.modal-content .modal-body ul li{
+  padding-top: 2px;
+  list-style-type: none;
+}
+.modal-content .modal-body p:before{
+  content:"";
+  width:10px;
+  height:10px;
+  background:#00a2e0;
+  border-radius:50%;
+  position: absolute;
+  left: 15px;
+}
+.testing-requirement-container .table-bordered {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+.persentage-leftalign{
+  text-align:right;
+}
+ .resetsave{
+  background:#ffffff !important;
+  color:#00a2e0 !important;
+}

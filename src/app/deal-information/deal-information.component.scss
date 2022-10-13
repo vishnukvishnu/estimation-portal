@@ -1,0 +1,44 @@
+
+.deal-info-container{
+  max-width: 1200px;
+  margin:0 auto;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  background:#ffffff;
+  height: auto;
+  margin-top: 20px;
+}
+.deal-info-container .deal-info-header{
+  border-bottom: 1px solid #e2dfde;
+}
+.deal-info-container ul{
+  padding-left:20px;
+  padding-bottom: 15px;
+}
+
+.deal-info-container h3{
+  margin-left: 30px;
+  padding-top: 15px;
+  color: #00a2e0;
+}
+.deal-info-container ul .li-wrapper{
+  list-style-type: none;
+  padding:10px;
+  display:inline;
+}
+.deal-info-container ul .li-wrapper button{
+  // background: #00a2e0;
+  // color:white;
+  margin-top: 10px;
+}
+.deal-info-container ul .li-wrapper .save-buttton{
+  margin-left: 25px;
+
+}
+.deal-info-container ul .li-wrapper p{
+  margin-bottom: 0px;
+  color: #808080d6;
+  padding-bottom: 10px;
+}
+.sub-header-container .sub-header-details li .disabled{
+  color: #c8e3fd;
+}

@@ -1,1 +1,272 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import 'assets/style/fontStyle.css';
+body{
+  background:#f1f1f1;
+}
+@font-face {
+  font-family: 'Akkurat-Bold';
+  src: url('assets/Fonts/Akkurat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'akkurat-mono';
+  src: url('assets/Fonts/akkurat-mono.ttf');
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Bold';
+  src: url('assets/Fonts/AkkuratStd-Bold.otf');
+}
+
+@font-face {
+  font-family: 'AkkuratStd-BoldItalic';
+  src: url('assets/Fonts/AkkuratStd-BoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Italic';
+  src: url('assets/Fonts/AkkuratStd-Italic.otf');
+
+}
+
+@font-face {
+  font-family: 'AkkuratStd-Light';
+  src: url('assets/Fonts/AkkuratStd-Light.otf');
+}
+
+@font-face {
+  font-family: 'AkkuratStd-LightItalic';
+  src: url('assets/Fonts/AkkuratStd-LightItalic.otf');
+}
+@font-face {
+  font-family: 'AkkuratStd-Regular';
+  src: url('assets/Fonts/AkkuratStd-Regular.otf');
+}
+
+//* {
+//
+//  font-family: 'AkkuratStd-Regular';
+// }
+
+ .mat-button-wrapper{
+  font-family:'AkkuratStd-Regular';
+  font-size:12px;
+   text-transform:uppercase;
+   letter-spacing: 1px;
+ }
+.logo-title-container .logo-title h3{
+  font-family: 'AkkuratStd-Regular';
+   font-size:18px;
+   color: #f2f2f2;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline{
+  background-color: #e2dfde !important;
+}
+
+.expansion-panel-table .mat-expansion-panel-body{
+  padding-left:0px;
+  padding-right:0px;
+}
+.mat-expansion-panel-header-title{
+  font-family:'AkkuratStd-Regular';
+  color: #00a2e0;
+  font-size: 16px;
+  position: relative;
+}
+
+//.header-wrapper-container .header-nav-menuicons .virtualtour-button {
+//  font-family:akkurat regular;
+//  font-size:14pt;
+//}
+
+// checkbox colorchange
+.mat-checkbox:not(.mat-checkbox-disabled).mat-accent .mat-checkbox-ripple .mat-ripple-element{
+  background: #16bbfb;
+}
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+  background: #16bbfb;
+}
+
+
+.li-wrapper p{
+  font-family: 'AkkuratStd-Regular';
+  font-size:11px;
+}
+.li-wrapper h5{
+  font-family: 'AkkuratStd-Regular';
+  font-size:13px;
+  color: #646363;
+}
+.li-wrapper h4{
+   font-family: 'AkkuratStd-bold';
+  font-size: 13px;
+}
+.mian-title {
+  font-family: 'AkkuratStd-Regular';
+  font-size:20px;
+}
+.mat-expansion-indicator::after {
+  color:#16bbfb !important;
+}
+.mat-expansion-indicator {
+  transform: rotate(180deg) !important;
+}
+
+.li-wrapper mat-checkbox{
+  font-family: 'AkkuratStd-Regular';
+  font-size:12px;
+}
+
+.cancel-buttton{
+  background: white;
+  color:#00a2e0;
+}
+
+.save-buttton{
+  background: #00a2e0;
+  color:white;
+}
+     //Green Tick
+.icon-check_mark:before {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+.active-tick {
+  background: #6dc24b !important;
+  color:white !important;
+}
+.save-buttton-popup{
+  background: #00a2e0;
+  color: white;
+  border: none;
+  padding: 5px 24px;
+  font-size: 12px;
+  font-family: akkuratStd-regular;
+}
+.modal-content .modal-header h4{
+  font-family:Akkurat-Bold;
+  font-size: 16px;
+  color: #00a2e0;
+}
+.modal-content .modal-header .alert{
+  color: red;
+  padding: 0px;
+}
+.modal-content .modal-body {
+  font-family: AkkuratStd-Light;
+  font-size: 12px;
+  padding-bottom: 0px;
+}
+.modal-content .modal-body h4{
+  font-family: AkkuratStd-Regular;
+  font-size: 17px;
+}
+.modal-dialog,
+.modal-content-scroll {
+  height: 75%;
+}
+
+.modal-body {
+  /* 100% = dialog height, 120px = header + footer */
+  // max-height: calc(100% - 200px);
+  overflow-y: scroll;
+}
+.projet-heding-inbetween {
+  font-size: 20px;
+  font-family: akkuratStd-Regular;
+  margin-bottom: 0px;
+  margin-top: 25px;
+}
+.projet-heding-inbetween-left {
+  margin-left: 77px;
+
+}
+.projet-heding-inbetween-right {
+  margin-right: 75px;
+
+}
+.icon-info-th{
+  position: relative;
+}
+.icon-info-th .icon-info{
+  position: absolute;
+  left: 380px;
+  top: 16px;
+  font-size: 18px;
+  color: #00a2e0;
+  text-align:center;
+}
+.icon-info{
+  position: absolute;
+  left: 250px;
+  top: 5px;
+  font-size: 18px;
+  color: #00a2e0;
+}
+.li-wrapper .icon-star_filled{
+  color:red;
+  font-size:8px;
+}
+.mat-form-field-appearance-legacy .mat-form-field-infix{
+  padding-top:0px;
+}
+
+.deal-infotesting-container .mat-expansion-panel{
+  margin:0px 15px;
+  border:1px solid #e2dfde;
+}
+.deal-parameter-container .mat-checkbox-inner-container{
+  margin-top:2px;
+  margin-right: 12px;
+}
+
+// Scroll bar style
+
+.scrollbar
+{
+
+	height: 50px;
+	width:auto;
+	overflow-y: scroll;
+
+}
+
+.force-overflow
+{
+	min-height: 50px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+
+/*
+ *  STYLE 2
+ */
+
+#style-2::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius:10px;
+	-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+	background-color: 808080d6;
+}

@@ -1,0 +1,117 @@
+
+.estimation-flow-container{
+  max-width: 1200px;
+  margin:0 auto;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  background:#ffffff;
+  height: auto;
+  margin-top: 20px;
+}
+
+.estimation-flow-container ul{
+  padding-left:20px;
+  padding-bottom: 15px;
+}
+
+.estimation-flow-container ul .li-wrapper {
+  list-style-type:none;
+
+}
+.estimation-flow-container ul .li-wrapper ul{
+  padding-left: 0px;
+}
+.estimation-flow-container ul .li-wrapper ul li{
+  padding:10px;
+}
+.li-wrapper ul li{
+  list-style-type:none;
+  display:inline-block;
+}
+.li-wrapper ul li .example-header-image{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 1px solid #e2dfde;
+}
+.li-wrapper ul li .example-header-image:hover {
+  background: #00a2e0;
+  cursor: pointer;
+  color: #ffffff;
+}
+.li-wrapper ul li .example-header-image a:hover {
+  color: #ffffff;
+}
+.li-wrapper ul li .example-header-image a{
+  font-size: 20px;
+  padding-left: 11px;
+  color:#00a2e0;
+}
+.estimation-flow-container h3{
+  margin-left: 30px;
+  padding-top: 15px;
+  color: #00a2e0;
+}
+
+.active{
+  background: #00a2e0;
+}
+.active a{
+  color:#ffffff !important;
+}
+.addbold{
+  font-weight:bold;
+}
+.icon-check_mark:before {
+  position: absolute;
+  top: 17px;
+  left: 34px;
+}
+.estimation-flow-container  ul li{
+  font-family: 'AkkuratStd-Regular';
+    font-size: 13px;
+}
+
+.bubble::after
+{
+  content: "";
+  position: absolute;
+  top: 250px;
+  left: 105px;
+  border-style: solid;
+  border-width: 10px 10px 0;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+
+}
+.bubble:before
+{
+  content: "";
+  position: absolute;
+  top: 250px;
+  left: 104px;
+  border-style: solid;
+  border-width: 11px 11px 0;
+  border-color: #bbb8b8 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+}
+.icon-arrow_drop_right{
+  position:absolute;
+  top:21px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .bubble::after
+  {
+    top: 502px;
+  }
+  .bubble:before
+  {
+    top: 502px;
+
+  }
+
+}
